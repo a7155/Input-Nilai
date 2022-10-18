@@ -1,0 +1,69 @@
+package com.ajis.mahasiswa;
+
+public class Mahasiswa {
+
+   String nim, nama, grade ;
+    int nilai;
+
+    public Mahasiswa(String nim, String nama, int nilai) {
+        this.nim = nim;
+        this.nama = nama;
+        this.nilai = nilai;
+    }
+
+    public String getNim() {
+        return nim;
+    }
+
+    public void setNim(String nim) {
+        this.nim = nim;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public String getGrade() {
+        if(getNilai()<=100 && getNilai() >=80){
+            return "A";
+        }
+        else if(getNilai()<=79 && getNilai() >=70){
+            return "B";
+        }
+        else if(getNilai()<=69 && getNilai() >=60){
+            return "C";
+        }
+        else if(getNilai()<=59 && getNilai() >=50){
+            return "D";
+        }
+        else if(getNilai()<50 && getNilai() >0){
+            return "E";
+        }
+        else{
+            return "Input nilai anda salah";
+        }
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    public int getNilai() {
+        return nilai;
+    }
+
+    public void setNilai(int nilai) {
+        this.nilai = nilai;
+    }
+    
+   public void infoMahasiswa(){
+   System.out.println("NIM :" + getNim());
+   System.out.println("Nama :" + getNama());
+   System.out.println("Nilai :" + getNilai());
+   System.out.println("Grade :" + getGrade());
+   }
+}
