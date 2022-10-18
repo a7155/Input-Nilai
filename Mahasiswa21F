@@ -1,0 +1,30 @@
+package com.ajis.mahasiswa;
+
+
+import java.util.Scanner;
+
+
+public class Mahasiswa21F extends Mahasiswa {
+     
+  Mahasiswa21F(String nim, String nama, int nilai) {
+        super(nim,nama,nilai);
+    }
+    public static void main(String[]args) {
+        
+        Scanner sc = new Scanner(System.in);
+       // Mahasiswa21F mhs[]=new Mahasiswa21F[2];
+       // for(int i=0;i<=4;i++){
+            System.out.println("Isikan NIM:");
+            String nim = sc.nextLine();
+            System.out.println("Isikan NAMA:");
+            String nama = sc.nextLine();
+            System.out.println("Isikan NILAI:");
+            int nilai = Integer.parseInt(sc.nextLine());
+            
+           Mahasiswa21F mhs = (Mahasiswa21F) new Mahasiswa(nim,nama,nilai);
+           mhs.infoMahasiswa();
+        }
+    } 
+
+   
+}
